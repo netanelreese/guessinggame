@@ -5,13 +5,13 @@
 using namespace std;
 
 int main() {
-    int randNum = rand();
+    int randNum = rand() % 10 + 1;
     int guess = 0;
     while (guess != randNum) {
         cout << "Enter your guess: " << endl;
         cin >> guess;
         if (guess == randNum) {
-            cout << "Congrats!" << endl;
+            cout << "Congrats you guessed it!" << endl;
             break;
         }
     }
