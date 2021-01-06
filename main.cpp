@@ -11,10 +11,11 @@ char userChoice() {
     while (choice != 'y' || choice != 'n') {
         cout << "\nDo you wanna keep playing?(y/n)" << endl;
         cin >> choice;
+        cout << choice;
         if (choice == 'y') {
             return 'y';
         }
-        else if (choice = 'n') {
+        else if (choice == 'n') {
             return 'n';
         }
         else {
@@ -69,7 +70,8 @@ int main() {
     }
 
     cout << "Thank you :)" << endl;
-    Sleep(miliseconds);
+    Sleep(miliseconds); //shows the end card for three seconds before closing;
+
 
     return 0;
 }
