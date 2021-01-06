@@ -7,13 +7,12 @@ using namespace std;
 int main() {
     int max;
     int min;
-    cout << "Enter Maximum Value:" << endl; //prompting maximum value from user
-    cin >> max;
-    cout << "Enter Minimum Value:" << endl; //prompting min
+    cout << "Enter Minimum Value:" << endl; //prompting min value from user
     cin >> min;
+    cout << "Enter Maximum Value:" << endl; //prompting max
+    cin >> max;
 
     int randNum = rand() % max + min; // using random function to generate number between two values of max and min
-    cout <<randNum;
     int guess = 0; //generating random number
 
     while (guess != randNum) { //using while loop to keep asking to enter guess if user does not get it
@@ -24,10 +23,10 @@ int main() {
             break;
         }
         else if (guess < randNum) {
-            cout << "The number is lower" << endl;
+            cout << "The secret number is higher..." << endl;
         }
-        else {
-            cout << "The number is higher" << endl;
+        else if (guess > randNum) {
+            cout << "The secret number is lower..." << endl;
         }
     }
 
