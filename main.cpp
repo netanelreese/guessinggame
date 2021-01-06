@@ -73,7 +73,7 @@ char userChoice() {
             return 'n';
         }
         else {
-            cout << "Invalid Choice." << endl;
+            cout << "Invalid Input." << endl;
         }
     }
 }
