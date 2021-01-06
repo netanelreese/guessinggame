@@ -5,29 +5,23 @@
 
 using namespace std;
 
-char userChoice() {
-    char choice = 's';
-
-    while (choice != 'y' || choice != 'n') {
-        cout << "\nDo you wanna keep playing?(y/n)" << endl;
-        cin >> choice;
-        if (choice == 'y') {
-            return 'y';
-        }
-        else if (choice == 'n') {
-            return 'n';
-        }
-        else {
-            cout << "Invalid Choice." << endl;
-        }
-    }
-}
+char userChoice();
+void game(char choice);
 int main() {
-    int miliseconds = 3000;
+    int miliseconds = 3000; //3 seconds in miliseconds
 
 
-    char playChoice = 'y';
+    char playChoice = 'y'; //making initial condition true to enter while loop
+    game(playChoice);
 
+    cout << "Thank you, goodbye :)" << endl;
+    Sleep(miliseconds); //shows the end card for three seconds before closing;
+
+
+    return 0;
+}
+void game(char choice) {
+    char playChoice = choice; //
     while (playChoice != 'n') {
         int max;
         int min;
@@ -67,10 +61,21 @@ int main() {
         }
         playChoice = userChoice();
     }
+}
+char userChoice() {
+    char choice = 's';
 
-    cout << "Thank you, goodbye :)" << endl;
-    Sleep(miliseconds); //shows the end card for three seconds before closing;
-
-
-    return 0;
+    while (choice != 'y' || choice != 'n') {
+        cout << "\nDo you wanna keep playing?(y/n)" << endl;
+        cin >> choice;
+        if (choice == 'y') {
+            return 'y';
+        }
+        else if (choice == 'n') {
+            return 'n';
+        }
+        else {
+            cout << "Invalid Choice." << endl;
+        }
+    }
 }
