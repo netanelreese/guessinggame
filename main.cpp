@@ -7,16 +7,14 @@ using namespace std;
 
 char userChoice();
 void game(char choice);
+void goodbye();
+
 int main() {
-    int miliseconds = 3000; //3 seconds in miliseconds
 
+    char playChoice = 'y'; //making initial condition true to enter game functon
+    game(playChoice); //call game
 
-    char playChoice = 'y'; //making initial condition true to enter while loop
-    game(playChoice);
-
-    cout << "Thank you, goodbye :)" << endl;
-    Sleep(miliseconds); //shows the end card for three seconds before closing;
-
+    goodbye(); //call goodbye message and sleep
 
     return 0;
 }
@@ -78,4 +76,9 @@ char userChoice() {
             cout << "Invalid Choice." << endl;
         }
     }
+}
+void goodbye() {
+    int miliseconds = 3000; //3 seconds in miliseconds
+    cout << "Thank you, goodbye :)" << endl;
+    Sleep(miliseconds); //shows the end card for three seconds before closing;
 }
