@@ -13,6 +13,7 @@ int main() {
     cin >> min;
 
     int randNum = rand() % max + min; // using random function to generate number between two values of max and min
+    cout <<randNum;
     int guess = 0; //generating random number
 
     while (guess != randNum) { //using while loop to keep asking to enter guess if user does not get it
@@ -21,6 +22,12 @@ int main() {
         if (guess == randNum) { //if guess is correct the while loop is broken and user is congratulated
             cout << "Congrats you guessed it!" << endl; //poggers
             break;
+        }
+        else if (guess < randNum) {
+            cout << "The number is lower" << endl;
+        }
+        else {
+            cout << "The number is higher" << endl;
         }
     }
 
