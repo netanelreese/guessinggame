@@ -1,13 +1,32 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <windows.h>
 
 using namespace std;
 
+char userChoice() {
+    char choice = 's';
+
+    while (choice != 'y' || choice != 'n') {
+        cout << "\nDo you wanna keep playing?(y/n)" << endl;
+        cin >> choice;
+        if (choice == 'y') {
+            return 'y';
+        }
+        else if (choice = 'n') {
+            return 'n';
+        }
+        else {
+            cout << "Invalid Choice." << endl;
+        }
+    }
+}
 int main() {
+    int miliseconds = 3000;
+
 
     char playChoice = 'y';
-    char tempChoice;
 
     while (playChoice != 'n') {
         int max;
@@ -46,18 +65,11 @@ int main() {
                 --guessLimit;
             }
         }
-        cout << "\nDo you wanna keep playing?(y/n)" << endl;
-        cin >> tempChoice;
-        if (tempChoice == 'y') {
-            playChoice = 'y';
-        }
-        else if (tempChoice == 'n') {
-            playChoice = 'n';
-        }
-        else {
-            cout << "Invalid input." << endl;
-        }
+        playChoice = userChoice();
     }
+
+    cout << "Thank you :)" << endl;
+    Sleep(miliseconds);
 
     return 0;
 }
