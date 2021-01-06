@@ -1,3 +1,5 @@
-# guessing game
-Funky guessing game with ole natey boy ??
-Can I get a poggers!!
+# **GUESSING GAME**
+**Funky** guessing game with ole natey boy :)
+&nbsp
+Can I get a *poggers*!!
+![Pog](monkey.png)
